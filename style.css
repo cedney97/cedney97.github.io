@@ -76,3 +76,8 @@ html {
     top: 20px;
     left: 20px;
   }
+  
+  .section {
+    text-align:center;
+    font-size: 3em;
+  }
