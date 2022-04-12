@@ -1,62 +1,37 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<script src="fullPage.js"></script>
-<!-- <main id="main">
-    <h1 id="title">Top 5 Hollow Knight Charms</h1>
-    <p>(According to Me)</p>
-    <div id="img-div">
-      <img id="image" src="https://i.pinimg.com/originals/5e/b0/c9/5eb0c96c4febf7c67dfc2974788cd395.jpg" alt="The Knight, warding off a wave of enemies"></img>
-      <h2 id="img-caption">"Do you wear a lot of Charms at once? It's a lot of fun isn't it, mixing and matching them to get the perfect combination?"</h2>
-      <p id="img-caption">-Salubra</p>
-    </div>
-    <p id="tribute-info">This is my, Cade Edney's, list of my 5 favorite charms in Hollow Knight. They're the ones I use most often.</p>
-    <ol>
-      <li>
-        <strong>Unbreakable/Fragile Strength</strong>
-        <img id="img-charm" src="https://static.wikia.nocookie.net/hollowknight/images/a/ac/Unbreakable_Strength.png" alt="The Unbreakable Strength Charm"></img>
-        <p>
-          Probably one of the best charms in the game, especially for those who rely way too much on their nail. This charm increases the strength of your nail by 50%, as well as has some devastating combos with other charms, such as...
-        </p>
-      </li>
-      <li>
-        <strong>Quick Slash</strong>
-        <img id="img-charm" src="https://static.wikia.nocookie.net/hollowknight/images/5/5f/Quick_Slash.png" alt="The Quick Slash Charm"></img>
-        <p>
-          With the ability to strike your nail even quicker than before, Quick Slash is easily one of the most powerful charms in Hollow Knight. It decreases both the animation time as well as the cooldown for you attacks, allowing you to get more slashes in with your nail. This is doubly terrifying for you enemies if you also have Unbreakable/Fragile Strength.
-        </p>
-      </li>
-      <li>
-        <strong>Nailmaster's Glory</strong>
-        <img id="img-charm" src="https://static.wikia.nocookie.net/hollowknight/images/0/0f/Nailmaster%27s_Glory.png" alt="The Nailmaster's Glory Charm"></img>
-        <p>
-          Because speed when attacking matters a lot to me, I often find that having stronger attacks that recharge or load quicker are more reliable to me than spells, which leads into the next charm. Nailmaster's Glory lowers the charge time of all nail arts by nearly 45%. With it costing only one charm notch, this charm is sure to be a favorite of mine.
-        </p>
-      </li>
-      <li>
-        <strong>Sharp Shadow</strong>
-        <img id="img-charm" src="https://static.wikia.nocookie.net/hollowknight/images/1/13/Sharp_Shadow.png" alt="The Sharp Shadow Charm"></img>
-        <p>
-          This charm turns what normally would be just passive movement into a fully-functional attack. With your Shade Cloak, you are able to dash through enemies and their attacks. As an added bonus, if you equip the Sharp Shadow charm, those dashes become deadly to your opponent, allowing you to get a few more points of damage to add to your dps. On top of the extra damage, the distance you dash is increased by 39%.
-        </p>
-      </li>
-      <li>
-        <strong>Hiveblood</strong>
-        <img id="img-charm" src="https://static.wikia.nocookie.net/hollowknight/images/e/eb/Hiveblood.png" alt="The Hiveblood Charm"></img>
-        <p>
-          This charm is one of my favorites, but is number 5 on this list because of its drawbacks. The Hiveblood charm works as a self-healing, somewhat, as when you get hit, the mask you lost will slowly recharge back and, if you wait for the full cooldown, will regain itself. While the masks on the GUI look cool with their honeycomb look, the time it takes to heal a mask with this charm, as well as the 4 charm notch cost, decrease my ability to use it as often. Despite this, it's still one of my favorite charms.
-        </p>
-      </li>
-    </ol>
-    <a>Those are my 5 favorite charms! If you want to check out the other 35, as well as the rest of the Hollow Knight wiki, go to
-    <a id="tribute-link" target="_blank" href="https://hollowknight.fandom.com/wiki/Category:Charms">this link</a>
-  </main> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.3/fullpage.min.css" integrity="sha512-iNhpg536nXr1Sh9RjvseXeoiweO8AE7fRZap9NAyZgE5qi0/HDc83prB/tYRGgB7uGVMExFfwxlZW+VTGdMeJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.scss">
+</head>
+<body>
 
-  <div id="fullpage">
-    <div class="section">Section a</div>
-    <div class="section">
-        <div class="slide">Slide 2.1</div>
-        <div class="slide">Slide 2.2</div>
-        <div class="slide">Slide 2.3</div>
+    <div id = "fullPage">
+
+        <section class = "section s1">
+            <h1>The First Section</h1>
+        </section>
+        <section class = "section s2">
+            <h1>The Second Section</h1>
+        </section>
+        <section class = "section s3">
+            <h1>The Third Section</h1>
+        </section>
+
     </div>
-    <div class="section">Section 3</div>
-</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.3/fullpage.min.js" integrity="sha512-k5r+RWDZGRHSjXR2yqMfc3Q2odfl1NGsunqgqhMpzSBJOCXL+f87gtwhmcTG/ohI+4f0L7dJ8lHkl8tUBX6vWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        new fullPage('#fullPage', {
+            autoScrolling: true
+        })
+
+    </script>
+</body>
+</html>
