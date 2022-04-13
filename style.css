@@ -5,33 +5,75 @@
     font-family: sans-serif;
 }
 
+h1 {
+    font-family: "AstroSpace", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+p {
+    font-family: "Quarttrocentro", sans-serif;
+}
+
 section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     scroll-snap-align: start; 
 }
 
-.one {
+.home {
     background: #2565ae
 }
 
-.two {
+.about {
     background: #3c99dc
 }
 
-.three {
+.projects {
     background: #66d3fa
 }
 
-.four {
+.contact {
     background: #3c99dc
 }
 
-.container {
+.page-container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+}
+
+@font-face {
+    font-family: 'AstroSpace';
+    src: url('./fonts/AstroSpace.ttf');
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: ls;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
 }

@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div class = "container">
-        <section class = "one">
-            <h1>First Page</h1>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="#navbar" aria-exanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="iconbar"></span>
+                    <span class="iconbar"></span>
+                    <span class="iconbar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Text here</a>
+            </div>
+            <div id="navbar" class="nav navbar-nav navbar-right">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <section id="home" class="home">
+            <h1>Home</h1>
         </section>
-        <section class = "two">
-            <h1>Second Page</h1>
+        <section id="about" class="about">
+            <h1>About</h1>
         </section>
-        <section class = "three">
-            <h1>Third Page</h1>
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
         </section>
-        <section class = "four">
-            <h1>Fourth Page</h1>
+        <section id="contact" class="contact">
+            <h1>Contact</h1>
         </section>
     </div>
 </body>
+
 </html>
