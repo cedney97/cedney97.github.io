@@ -24,7 +24,6 @@ section {
 }
 
 .home {
-    font-family: "AstroSpace";
     background: #2565ae;
 }
 
@@ -44,6 +43,7 @@ section {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    transition: margin-left .5s;
 }
 
 .sidenav {
@@ -54,6 +54,7 @@ section {
     top: 0;
     left: 0;
     background-color: #111;
+    background-image: linear-gradient(to right, #2565ae, black);
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
