@@ -5,13 +5,14 @@
     font-family: sans-serif;
 }
 
-h1 {
-    font-family: "AstroSpace", Helvetica, Arial, sans-serif;
-    color: white;
+@font-face {
+    font-family: "AstroSpace";
+    src: url(./fonts/AstroSpace.ttf);
 }
 
-p {
-    font-family: "Quarttrocentro", sans-serif;
+h1 {
+    font-family: "AstroSpace";
+    color: white;
 }
 
 section {
@@ -23,19 +24,20 @@ section {
 }
 
 .home {
-    background: #2565ae
+    font-family: "AstroSpace";
+    background: #2565ae;
 }
 
 .about {
-    background: #3c99dc
+    background: #3c99dc;
 }
 
 .projects {
-    background: #66d3fa
+    background: #66d3fa;
 }
 
 .contact {
-    background: #3c99dc
+    background: #3c99dc;
 }
 
 .page-container {
@@ -44,36 +46,56 @@ section {
     height: 100vh;
 }
 
-.container {
-    max-width: 1050px;
-    width: 90%;
-    margin: auto;
-}
-
-@font-face {
-    font-family: 'AstroSpace';
-    src: url('./fonts/AstroSpace.ttf');
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
+.sidenav {
+    height: 100%;
+    width: 0;
     position: fixed;
+    z-index: 2;
     top: 0;
-    width: 100%;
-    transition: ls;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
 }
 
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+.sidenav a{
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.navbar a:hover {
-    background: #ddd;
-    color: black;
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .menu-item {
+    font-family: "AstroSpace"
+}
+
+.openbtn {
+    top: 1%;
+    left: 95%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    background: url(./images/hamburger-menu.png);
+    background-size: 50px; 
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px}
+    .sidenav a {font-size: 18px};
 }
