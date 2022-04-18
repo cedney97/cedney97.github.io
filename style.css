@@ -1,3 +1,14 @@
+/* For variables */
+:root {
+    --home-color: #2565ae;
+    --abtcon-color: #3c99dc;
+    --proj-color: #66d3fa;
+    --black-sub: #062c62;
+    --reddish: #ee6d6d;
+    --typeSpeed: 6s;
+    --typeChars: 20;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +21,16 @@
     src: url(./fonts/AstroSpace.ttf);
 }
 
-h1 {
+h1, h2{
+    font-size: 3em;
     font-family: "AstroSpace";
     color: white;
+    width: max-content;
 }
 
 section {
+    font-family: "AstroSpace";
+    color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,20 +38,44 @@ section {
     scroll-snap-align: start; 
 }
 
+.astro-red {
+    color: var(--reddish);
+}
+
 .home {
-    background: #2565ae;
+    background: var(--home-color);
+}
+
+h1::before,
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+h1::before {
+    background: var(--home-color);
 }
 
 .about {
-    background: #3c99dc;
+    font-size: 3em;
+    font-family: "AstroSpace";
+    background: var(--abtcon-color);
 }
 
 .projects {
-    background: #66d3fa;
+    font-size: 3em;
+    font-family: "AstroSpace";
+    background: var(--proj-color);
 }
 
 .contact {
-    background: #3c99dc;
+    font-size: 3em;
+    font-family: "AstroSpace";
+    background: var(--abtcon-color);
 }
 
 .page-container {
@@ -54,7 +93,7 @@ section {
     top: 0;
     left: 0;
     background-color: #111;
-    background-image: linear-gradient(to right, #2565ae, black);
+    background-image: linear-gradient(to right, var(--black-sub), var(--home-color));
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -64,9 +103,9 @@ section {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #f1f1f1;
     display: block;
-    transition: 0.3s;
+    transition: 3s;
 }
 
 .sidenav a:hover {
@@ -82,7 +121,12 @@ section {
 }
 
 .sidenav .menu-item {
-    font-family: "AstroSpace"
+    font-family: "AstroSpace";
+    background-color: #e3efe8;
+    background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .openbtn {
@@ -94,6 +138,22 @@ section {
     z-index: 1;
     background: url(./images/hamburger-menu.png);
     background-size: 50px; 
+}
+
+.home-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--home-color));
+}
+
+.about-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--abtcon-color));
+}
+
+.proj-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--proj-color));
+}
+
+.cont-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--abtcon-color));
 }
 
 @media screen and (max-height: 450px) {
