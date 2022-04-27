@@ -47,6 +47,8 @@ function callback(entries, observer) {
         // Add sidenav and home-nav
         sideNav.classList.add("sidenav");
         sideNav.classList.add("home-nav");
+
+        setTimeout(addArrow, 2000);
     }
     else if (curSectionsName == "about") {
         // console.log("about");
@@ -57,6 +59,10 @@ function callback(entries, observer) {
         // Add sidenav and about-nav
         sideNav.classList.add("sidenav");
         sideNav.classList.add("about-nav");
+
+        // Get rid of arrow
+        const arrow = document.querySelector(".arrow");
+        arrow.innerHTML = "";
     }
     else if (curSectionsName == "projects") {
         // console.log("projects");
@@ -67,6 +73,10 @@ function callback(entries, observer) {
         // Add sidenav and proj-nav
         sideNav.classList.add("sidenav");
         sideNav.classList.add("proj-nav");
+
+        // Get rid of arrow
+        const arrow = document.querySelector(".arrow");
+        arrow.innerHTML = "";
     }
     else if (curSectionsName == "contact") {
         // console.log("contact");
@@ -77,5 +87,47 @@ function callback(entries, observer) {
         // Add sidenav and cont-nav
         sideNav.classList.add("sidenav");
         sideNav.classList.add("cont-nav");
+
+        // Get rid of arrow
+        const arrow = document.querySelector(".arrow");
+        arrow.innerHTML = "";
     }
+}
+
+// Home animation
+
+const textClass = document.querySelector(".fancy");
+const textString = textClass.textContent;
+const splitText = textString.split("");
+
+textClass.textContent = "";
+
+for (let i = 0; i < splitText.length; i++) {
+    textClass.innerHTML += "<span>" + splitText[i] + "</span>";
+}
+
+let char = 0;
+let timer = setInterval(onTick, 50);
+
+function onTick() {
+    const span = textClass.querySelectorAll('span')[char];
+    span.classList.add('fade');
+    char++;
+    if (char >= 11 && char <= 21) {
+        span.classList.add('astro-red')
+    }
+    if (char === splitText.length) {
+        completeFade();
+        return;
+    }
+}
+
+function completeFade() {
+    clearInterval(timer);
+    timer = null;
+}
+
+function addArrow() {
+    const arrow = document.querySelector('.arrow');
+    arrow.innerHTML += "<div></div>";
 }
