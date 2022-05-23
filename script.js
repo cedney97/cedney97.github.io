@@ -143,7 +143,7 @@ function changeAbtText(word) {
             console.log(el.classList);
         }
         if (word == "coder") {
-            el.innerHTML = "I have experience in Java, C++, HTML, CSS, Javascript, and Arduino C. See my sample projects in the next page for more details!";
+            el.innerHTML = "I have experience in Java, C++, HTML, CSS, Javascript, and Arduino C. See my sample projects on the next page for more details!";
             el.classList.remove("hide");
             console.log(el.classList);
         }

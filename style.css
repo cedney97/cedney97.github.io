@@ -27,6 +27,11 @@
     src: url(./fonts/Prototype.ttf)
 }
 
+@font-face {
+    font-family: "Aclonica";
+    src: url(./fonts/Aclonica.ttf);
+}
+
 h1,
 h2 {
     font-family: "AstroSpace";
@@ -427,21 +432,29 @@ span.fade {
 .option .label .info .main {
     font-weight: bold;
     font-size: 2rem;
-    font-family: "Protoype";
+    font-family: "Prototype";
 }
 
 .option .label .info .sub {
     transition-delay: .1s;
     font-size: 1rem;
-    font-family: "Protoype";
+    font-family: "Prototype";
 }
 
 /* Stuff for Contact Page */
 
 .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 3em;
-    font-family: "AstroSpace";
+    font-family: "Aclonica";
     background: var(--abtcon-color);
+}
+
+.contact-text {
+    font-size: .75em;
+    font-family: "Aclonica";
 }
 
 .page-container {
@@ -534,6 +547,4 @@ span.fade {
     .sidenav a {
         font-size: 18px
     }
-
-    ;
 }
