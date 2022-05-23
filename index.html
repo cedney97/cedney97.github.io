@@ -8,6 +8,8 @@
     <title>Cade Edney</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
+    <script src="https://kit.fontawesome.com/81b49b0c3d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -36,12 +38,77 @@
                     </div>
                 </div>
             </div>
-            <h2 class="about-txt">
-                Hello does this work
-            </h2>
+            <div class="about-txt">
+                <h2 class="about-heading">I am a 
+                        <span style="--order: 1" class="astro-teal" id="pulse" onmouseover="changeAbtText('student')" onmouseleave="changeAbtText('default')">student</span>, 
+                        <span style="--order: 2" class="astro-teal" id="pulse" onmouseover="changeAbtText('coder')" onmouseleave="changeAbtText('default')">coder</span>, 
+                        <span style="--order: 3" class="astro-teal" id="pulse" onmouseover="changeAbtText('musician')" onmouseleave="changeAbtText('default')">musician</span></h2>
+                <h2 class="about-desc" id="changer">Hover over the pulsing words for more info!</h2>
+            </div>
         </section>
         <section id="projects" class="projects">
-            <h2>Projects</h2>
+            <div class="options">
+                <div class="option active" style="--optionBackground:url(./images/place1.jpg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon">
+                            <i class="fa-solid fa-skull-crossbones icon2"></i>
+                        </div>
+                        <div class="info">
+                            <div class="main">Card 1</div>
+                            <div class="sub">This is the first card</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option" style="--optionBackground:url(./images/place2.jpg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon">
+                            <i class="fas fa-calculator icon2"></i>
+                        </div>
+                        <div class="info">
+                            <div class="main">Card 2</div>
+                            <div class="sub">This is the second card</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option" style="--optionBackground:url(./images/place3.jpg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon">
+                            <i class="fas fa-motorcycle icon2"></i>
+                        </div>
+                        <div class="info">
+                            <div class="main">Card 3</div>
+                            <div class="sub">This is the third card</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option" style="--optionBackground:url(./images/place4.jpg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon">
+                            <i class="fa-solid fa-ankh icon2"></i>
+                        </div>
+                        <div class="info">
+                            <div class="main">Card 4</div>
+                            <div class="sub">This is the fourth card</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option" style="--optionBackground:url(./images/place5.jpg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+                        <div class="icon">
+                            <i class="fa-solid fa-atom icon2"></i>
+                        </div>
+                        <div class="info">
+                            <div class="main">Card 5</div>
+                            <div class="sub">This is the fifth card</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contact" class="contact">
             <h2>Contact</h2>

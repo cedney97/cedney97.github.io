@@ -48,7 +48,8 @@ function callback(entries, observer) {
         sideNav.classList.add("sidenav");
         sideNav.classList.add("home-nav");
 
-        setTimeout(addArrow, 2000);
+        // setTimeout(addArrow, 2000);
+        addArrow();
     }
     else if (curSectionsName == "about") {
         // console.log("about");
@@ -103,7 +104,7 @@ const splitText = textString.split("");
 textClass.textContent = "";
 
 for (let i = 0; i < splitText.length; i++) {
-    textClass.innerHTML += "<span>" + splitText[i] + "</span>";
+    textClass.innerHTML += "<span class=\"home\">" + splitText[i] + "</span>";
 }
 
 let char = 0;
@@ -131,3 +132,35 @@ function addArrow() {
     const arrow = document.querySelector('.arrow');
     arrow.innerHTML += "<div></div>";
 }
+
+function changeAbtText(word) {
+    var el = document.getElementById("changer");
+    el.classList.add("hide");
+    setTimeout(function() {
+        if (word == "student") {
+            el.innerHTML = "I'm a student at Washington University in St. Louis, studying with the ambitions of majoring in Computer Science and a minor in Music.";
+            el.classList.remove("hide");
+            console.log(el.classList);
+        }
+        if (word == "coder") {
+            el.innerHTML = "I have experience in Java, C++, HTML, CSS, Javascript, and Arduino C. See my sample projects in the next page for more details!";
+            el.classList.remove("hide");
+            console.log(el.classList);
+        }
+        if (word == "musician") {
+            el.innerHTML = "I am the Music Director of the Washington Unviersity in St. Louis Aristocats, the school's premiere Disney A Cappella group, and I also have passion for playing piano, guitar, and the drums.";
+            el.classList.remove("hide");
+            console.log(el.classList);
+        }
+        if (word == "default") {
+            el.innerHTML = "Hover over the pulsing words for more info!";
+            el.classList.remove("hide");
+            console.log(el.classList);
+        }
+    }, 500);   
+}
+
+$(".option").click(function() {
+    $(".option").removeClass("active");
+    $(this).addClass("active");
+});
