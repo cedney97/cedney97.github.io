@@ -1,5 +1,64 @@
 const sideNav = document.getElementById("mySidenav");
 
+
+// Home animation
+
+function addArrow() {
+    const arrow = document.querySelector('.arrow');
+    arrow.innerHTML += "<div></div>";
+}
+
+
+var textWrapper = document.querySelector('.text-ani .letters');
+var homeHTML = textWrapper.innerHTML;
+
+function homeAnim() {
+    document.querySelector('.text-ani').style.opacity = 1;
+    var homeText = textWrapper.textContent;
+    textWrapper.innerHTML = "";
+
+    console.log(homeText);
+
+    for (let i = 0; i < 12; ++i) {
+        textWrapper.innerHTML += "<span class='letter astro-white'>" + homeText[i] + "</span>";  
+    }
+
+    if (window.innerWidth <= 815) {
+        textWrapper.innerHTML += "<br>";
+    }
+
+    for (let i = 12; i < 16; ++i) {
+        textWrapper.innerHTML += "<span class='letter astro-white'>" + homeText[i] + "</span>";  
+    }
+
+    for (let i = 16; i < 27; ++i) {
+        textWrapper.innerHTML += "<span class='letter astro-red'>" + homeText[i] + "</span>";
+    }
+    
+    doHomeAnimation();
+}
+
+function doHomeAnimation() {
+    anime.timeline()
+    .add({
+        targets: '.text-ani .letter',
+        rotateY: [-90, 0],
+        duration: 1300,
+        delay: (el, i) => 45 * i
+    })
+    .add({
+        targets: '.text-ani',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000,
+        complete: function(anim) {
+            $(".letters").html(homeHTML);
+            homeAnim();
+        }
+    })
+}
+
 function openNav() {
     if (sideNav.style.width == "250px") {
         closeNav();
@@ -49,6 +108,7 @@ function callback(entries, observer) {
         sideNav.classList.add("home-nav");
 
         // setTimeout(addArrow, 2000);
+        homeAnim();
         addArrow();
     }
     else if (curSectionsName == "about") {
@@ -93,44 +153,6 @@ function callback(entries, observer) {
         const arrow = document.querySelector(".arrow");
         arrow.innerHTML = "";
     }
-}
-
-// Home animation
-
-const textClass = document.querySelector(".fancy");
-const textString = textClass.textContent;
-const splitText = textString.split("");
-
-textClass.textContent = "";
-
-for (let i = 0; i < splitText.length; i++) {
-    textClass.innerHTML += "<span class=\"home\">" + splitText[i] + "</span>";
-}
-
-let char = 0;
-let timer = setInterval(onTick, 50);
-
-function onTick() {
-    const span = textClass.querySelectorAll('span')[char];
-    span.classList.add('fade');
-    char++;
-    if (char >= 11 && char <= 21) {
-        span.classList.add('astro-red')
-    }
-    if (char === splitText.length) {
-        completeFade();
-        return;
-    }
-}
-
-function completeFade() {
-    clearInterval(timer);
-    timer = null;
-}
-
-function addArrow() {
-    const arrow = document.querySelector('.arrow');
-    arrow.innerHTML += "<div></div>";
 }
 
 function changeAbtText(word) {

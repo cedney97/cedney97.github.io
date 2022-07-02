@@ -60,6 +60,11 @@ section {
     scroll-snap-align: start;
 }
 
+.astro-white {
+    font-family: "AstroSpace";
+    color: white;
+}
+
 .astro-red {
     font-family: "AstroSpace";
     color: var(--reddish);
@@ -123,6 +128,26 @@ span.fade {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
     }
+}
+
+.text-ani {
+    position: relative;
+    /* max-height: 5rem; */
+    align-items: center;
+    opacity: 1;
+}
+
+.text-ani .text-wrapper{
+    position: relative;
+    /* display: inline-block; */
+    overflow: hidden;
+}
+
+.text-ani .letter {
+    display: inline-block;
+    line-height: .5rem;
+    transform-origin: 0 0;
+    /* max-height: -20rem; */
 }
 
 /* Stuff for About Page */
@@ -455,6 +480,18 @@ span.fade {
 .contact-text {
     font-size: .75em;
     font-family: "Aclonica";
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1em;
+    font-family: "Aclonica";
+}
+
+.contact-icons > div {
+    font-family: "Aclonica";
+    font-size: .75em;
 }
 
 .page-container {
