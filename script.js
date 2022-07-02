@@ -21,11 +21,14 @@ function homeAnim() {
         textWrapper.innerHTML += "<span class='letter astro-white'>" + homeText[i] + "</span>";  
     }
 
+    let j = 12;
+
     if (window.innerWidth <= 815) {
         textWrapper.innerHTML += "<br>";
+        j = 13;
     }
 
-    for (let i = 12; i < 16; ++i) {
+    for (let i = j; i < 16; ++i) {
         textWrapper.innerHTML += "<span class='letter astro-white'>" + homeText[i] + "</span>";  
     }
 
