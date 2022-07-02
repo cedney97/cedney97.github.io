@@ -17,8 +17,6 @@ function homeAnim() {
     var homeText = textWrapper.textContent;
     textWrapper.innerHTML = "";
 
-    console.log(homeText);
-
     for (let i = 0; i < 12; ++i) {
         textWrapper.innerHTML += "<span class='letter astro-white'>" + homeText[i] + "</span>";  
     }
@@ -46,17 +44,17 @@ function doHomeAnimation() {
         duration: 1300,
         delay: (el, i) => 45 * i
     })
-    .add({
-        targets: '.text-ani',
-        opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000,
-        complete: function(anim) {
-            $(".letters").html(homeHTML);
-            homeAnim();
-        }
-    })
+    // .add({
+    //     targets: '.text-ani',
+    //     opacity: 0,
+    //     duration: 1000,
+    //     easing: "easeOutExpo",
+    //     delay: 1000,
+    //     complete: function(anim) {
+    //         $(".letters").html(homeHTML);
+    //         homeAnim();
+    //     }
+    // })
 }
 
 function openNav() {
