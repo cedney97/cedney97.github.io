@@ -163,22 +163,14 @@ function changeAbtText(word) {
         if (word == "student") {
             el.innerHTML = "I'm a student at Washington University in St. Louis, studying with the ambitions of majoring in Computer Science and a minor in Music.";
             el.classList.remove("hide");
-            console.log(el.classList);
         }
         if (word == "coder") {
             el.innerHTML = "I have experience in Java, C++, HTML, CSS, Javascript, and Arduino C. See my sample projects on the next page for more details!";
             el.classList.remove("hide");
-            console.log(el.classList);
         }
         if (word == "musician") {
             el.innerHTML = "I am the Music Director of the Washington Unviersity in St. Louis Aristocats, the school's premiere Disney A Cappella group, and I also have passion for playing piano, guitar, and the drums.";
             el.classList.remove("hide");
-            console.log(el.classList);
-        }
-        if (word == "default") {
-            el.innerHTML = "Hover over the pulsing words for more info!";
-            el.classList.remove("hide");
-            console.log(el.classList);
         }
     }, 500);   
 }

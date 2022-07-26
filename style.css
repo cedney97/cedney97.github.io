@@ -487,14 +487,99 @@ span.fade {
 
 .contact-icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 1em;
-    font-family: "Aclonica";
+    width: 100%;
 }
 
 .contact-icons > div {
     font-family: "Aclonica";
     font-size: .75em;
+    margin-top: 10vh;
+}
+
+.github {
+    margin-right: 10vh;
+}
+
+.github > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18vh;
+    justify-content: space-between;
+}
+
+.github > a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.github > a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.github > a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.github > a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.github > a > div {
+    align-items: center;
+    font-family: "Aclonica";
+}
+
+.github-logo {
+    width: 10vh;
+    height: 10vh;
+}
+
+.insta {
+    margin-left: 12vh;
+}
+
+.insta > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18vh;
+    justify-content: space-between;
+}
+
+.insta > a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.insta > a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.github > a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.insta > a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.insta > a > div {
+    align-items: center;
+    font-family: "Aclonica";
+}
+
+.insta-logo {
+    width: 13vh;
+    height: 13vh;
 }
 
 .page-container {
