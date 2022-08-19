@@ -178,4 +178,10 @@ function changeAbtText(word) {
 $(".option").click(function() {
     $(".option").removeClass("active");
     $(this).addClass("active");
+    if (this.id === 'first') {
+        $(this).attr("style", "--optionBackground:url(./images/Cropped.gif);");
+    } else {
+        $("#first").attr("style", "--optionBackground:url(./images/staticPirate.jpg);");
+        console.log(first);
+    }
 });

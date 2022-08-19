@@ -134,6 +134,7 @@ span.fade {
     position: relative;
     align-items: center;
     line-height: 3rem;
+    text-align: center;
 }
 
 .text-ani .text-wrapper{
@@ -204,7 +205,7 @@ span.fade {
 }
 
 .back {
-    background-image: url(./images/cream.JPG);
+    background-image: url(./images/photoCade.JPG);
     background-size: 500px;
     background-position: 45% 50%;
     transform: rotate3d(1, 1, 0, 180deg);
@@ -266,8 +267,8 @@ span.fade {
 
 .projects {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     overflow: hidden;
     height: 100vh;
@@ -276,6 +277,21 @@ span.fade {
     font-size: 3em;
     font-family: "AstroSpace";
     background: var(--proj-color);
+}
+
+.projects-title {
+    font-family: "AstroSpace";
+    font-size: 1em;
+    margin-bottom: -2em;
+    text-shadow: 2px 2px var(--black-sub);
+}
+
+.projects-desc {
+    font-family: "AstroSpace";
+    font-size: .5em;
+    text-align: center;
+    text-shadow: 2px 2px var(--black-sub);
+    margin-bottom: -2em;
 }
 
 .options {
@@ -463,6 +479,20 @@ span.fade {
     font-family: "Prototype";
 }
 
+.option .label .info .main a{
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Prototype";
+}
+
+.option .label .info .main a:visited,
+.option .label .info .main a:link,
+.option .label .info .main a:hover,
+.option .label .info .main a:active {
+    text-decoration: none;
+    color: white;
+}
+
 .option .label .info .sub {
     transition-delay: .1s;
     font-size: 1rem;
@@ -487,7 +517,7 @@ span.fade {
 
 .contact-icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     font-size: 1em;
     width: 100%;
 }
@@ -499,7 +529,7 @@ span.fade {
 }
 
 .github {
-    margin-right: 10vh;
+    margin-right: 6vh;
 }
 
 .github > a {
@@ -510,22 +540,18 @@ span.fade {
     justify-content: space-between;
 }
 
-.github > a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-.github > a:link {
-    text-decoration: none;
-    color: white;
-}
-
-.github > a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.github > a:active {
+.github > a:visited,
+.github > a:link,
+.github > a:hover,
+.github > a:active,
+.insta > a:visited,
+.insta > a:link,
+.insta > a:hover,
+.insta > a:active,
+.linkedin > a:visited,
+.linkedin > a:link,
+.linkedin > a:hover,
+.linkedin > a:active {
     text-decoration: none;
     color: white;
 }
@@ -540,36 +566,12 @@ span.fade {
     height: 10vh;
 }
 
-.insta {
-    margin-left: 12vh;
-}
-
 .insta > a {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 18vh;
     justify-content: space-between;
-}
-
-.insta > a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-.insta > a:link {
-    text-decoration: none;
-    color: white;
-}
-
-.github > a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.insta > a:active {
-    text-decoration: none;
-    color: white;
 }
 
 .insta > a > div {
@@ -580,6 +582,24 @@ span.fade {
 .insta-logo {
     width: 13vh;
     height: 13vh;
+}
+
+.linkedin > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18vh;
+    justify-content: space-between;
+}
+
+.linkedin-logo {
+    width: 9vh;
+    height: 9vh;
+}
+
+.linkedin > a > div {
+    align-items: center;
+    font-family: "Aclonica";
 }
 
 .page-container {
