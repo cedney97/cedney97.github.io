@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cade Edney</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/gen.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="./style/projects.css">
+    <link rel="stylesheet" href="./style/contact.css">
     <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/81b49b0c3d.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -44,10 +50,14 @@
                 </div>
             </div>
             <div class="about-txt">
-                <h2 class="about-heading">I am a 
-                        <span style="--order: 1" class="astro-teal" id="pulse" onmouseover="changeAbtText('student')">student</span>, 
-                        <span style="--order: 2" class="astro-teal" id="pulse" onmouseover="changeAbtText('coder')">coder</span>, 
-                        <span style="--order: 3" class="astro-teal" id="pulse" onmouseover="changeAbtText('musician')">musician</span></h2>
+                <h2 class="about-heading">I am a
+                    <span style="--order: 1" class="astro-teal" id="pulse"
+                        onmouseover="changeAbtText('student')">student</span>,
+                    <span style="--order: 2" class="astro-teal" id="pulse"
+                        onmouseover="changeAbtText('coder')">coder</span>,
+                    <span style="--order: 3" class="astro-teal" id="pulse"
+                        onmouseover="changeAbtText('musician')">musician</span>
+                </h2>
                 <h2 class="about-desc" id="changer">Hover over the pulsing words for more info!</h2>
             </div>
         </section>
@@ -98,7 +108,8 @@
                             <i class="fa-solid fa-video icon2"></i>
                         </div>
                         <div class="info">
-                            <div class="main"><a href="https://vimeo.com/frontiercamp?embedded=true&source=owner_name&owner=28364185">Frontier Camp Video Editing</a></div>
+                            <div class="main"><a
+                                    href="https://vimeo.com/frontiercamp?embedded=true&source=owner_name&owner=28364185">Frontier Camp Video Editing</a></div>
                             <div class="sub">Check out Weeks 1, 5 - 8, Midsouth, Angel Tree, Timothy Week,<br>and Summer Staff of 2022!</div>
                         </div>
                     </div>
@@ -122,22 +133,34 @@
             <div class="contact-icons">
                 <div class="github">
                     <a href="https://github.com/cedney97">
-                        <img src="images/github.png" alt="Github Logo" class="github-logo"></img>
-                        <div>Github</div>
+                        <img src="./style/images/github.png" alt="Github Logo" class="github-logo"></img>
+                        <div class="github-label">Github</div>
                     </a>
                 </div>
                 <div class="insta">
                     <a href="https://www.instagram.com/cadeedney/">
-                        <img src="images/insta.svg" alt="Instagram Logo" class="insta-logo"></img>
-                        <div>Instagram</div>
+                        <img src="./style/images/insta.png" alt="Instagram Logo" class="insta-logo"></img>
+                        <div class="insta-label">Instagram</div>
                     </a>
                 </div>
                 <div class="linkedin">
                     <a href="https://www.linkedin.com/in/cade-edney-4a8599236/">
-                        <img src="images/linkedin.png" alt="Instagram Logo" class="linkedin-logo"></img>
-                        <div>LinkedIn</div>
+                        <img src="./style/images/linkedin.png" alt="Instagram Logo" class="linkedin-logo"></img>
+                        <div class="linkedin-label">LinkedIn</div>
                     </a>
                 </div>
+            </div>
+            <div class="contact-text">Or</div>
+            <div class="contact-form" id="form-container">
+                <form action="/data.txt" class="form">
+                    <label for="name" class="name-label contact-label">Name</label>
+                    <input type="text" name="name" class="name-input" placeholder="Full Name" />
+                    <label for="email" class="email-label contact-label">Email</label>
+                    <input type="text" name="email" class="email-input" placeholder="example@domain.com" />
+                    <label for="message" class="message-label contact-label">Message</label>
+                    <textarea type="text" name="message" class="message-input" placeholder="Type message here..."></textarea>
+                </form>
+                <button id="toggle" onclick="openContact()">Send Me a Message!</button>
             </div>
         </section>
     </div>

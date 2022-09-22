@@ -1,0 +1,72 @@
+@import url("./gen.css");
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    background-image: linear-gradient(to right, var(--black-sub), var(--home-color));
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .menu-item {
+    font-family: "AstroSpace";
+    background-color: #e3efe8;
+    background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.openbtn {
+    top: 0px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    background: url(./images/hamburger-menu.png);
+    background-size: 50px;
+}
+
+.home-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--home-color));
+}
+
+.about-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--abtcon-color));
+}
+
+.proj-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--proj-color));
+}
+
+.cont-nav {
+    background-image: linear-gradient(to right, var(--black-sub), var(--abtcon-color));
+}

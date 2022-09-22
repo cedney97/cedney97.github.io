@@ -161,7 +161,7 @@ function changeAbtText(word) {
     el.classList.add("hide");
     setTimeout(function() {
         if (word == "student") {
-            el.innerHTML = "I'm a student at Washington University in St. Louis, studying with the ambitions of majoring in Computer Science and a minor in Music.";
+            el.innerHTML = "I'm a student at Washington University in St. Louis, majoring in Computer Science and a minor in Music.";
             el.classList.remove("hide");
         }
         if (word == "coder") {
@@ -169,7 +169,7 @@ function changeAbtText(word) {
             el.classList.remove("hide");
         }
         if (word == "musician") {
-            el.innerHTML = "I am the Music Director of the Washington Unviersity in St. Louis Aristocats, the school's premiere Disney A Cappella group, and I also have passion for playing piano, guitar, and the drums.";
+            el.innerHTML = "I am the Music Director of the Washington University in St. Louis Aristocats, the school's premiere Disney A Cappella group, and I also have passion for playing piano, guitar, and the drums.";
             el.classList.remove("hide");
         }
     }, 500);   
@@ -182,6 +182,30 @@ $(".option").click(function() {
         $(this).attr("style", "--optionBackground:url(./images/Cropped.gif);");
     } else {
         $("#first").attr("style", "--optionBackground:url(./images/staticPirate.jpg);");
-        console.log(first);
+        // console.log(first);
     }
 });
+
+function openContact() {
+    var form = document.querySelector(".form");
+    var button = document.querySelector("#toggle");
+    if (window.getComputedStyle(form).display === "none") {
+        form.style.display = "grid";
+        button.innerHTML = "Send"
+    } else if (window.getComputedStyle(form).display === "grid") {
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "cadeedney@gmail.com",
+            Password: "Malachi97*",
+            To: 'cadeedney@gmail.com',
+            From: "cadeedney@gmail.com",
+            Subject: "Message from " + document.querySelector(".name-input").textContent,
+            Body: document.querySelector(".message-input").textContent
+        })
+        .then (
+            message => alert("Email Sent")
+        )
+        form.style.display = "none";
+        button.innerHTML = "Send Another Message!"
+    }
+}

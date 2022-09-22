@@ -1,0 +1,87 @@
+:root {
+    --home-color: #2565ae;
+    --abtcon-color: #3c99dc;
+    --proj-color: #66d3fa;
+    --black-sub: #062c62;
+    --reddish: #ee6d6d;
+    --teal: #03eec9;
+    --orange: #ecb803;
+    --abt-txt: #5f3cdc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: "AstroSpace";
+    src: url(./fonts/AstroSpace.ttf);
+}
+
+@font-face {
+    font-family: "Prototype";
+    src: url(./fonts/Prototype.ttf)
+}
+
+@font-face {
+    font-family: "Aclonica";
+    src: url(./fonts/Aclonica.ttf);
+}
+
+h1,
+h2 {
+    font-family: "AstroSpace";
+    color: white;
+    height: max-content;
+}
+
+h1 {
+    font-size: 3em;
+    width: max-content;
+    text-shadow: 2px 2px var(--black-sub);
+    line-height: 100vh;
+}
+
+h2 {
+    font-size: .5em;
+}
+
+section {
+    font-family: "AstroSpace";
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.astro-white {
+    font-family: "AstroSpace";
+    color: white;
+}
+
+.astro-red {
+    font-family: "AstroSpace";
+    color: var(--reddish);
+}
+
+.astro-teal {
+    font-family: "AstroSpace";
+    color: var(--teal);
+}
+
+/* For different screen sizes */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px
+    }
+
+    .sidenav a {
+        font-size: 18px
+    }
+}

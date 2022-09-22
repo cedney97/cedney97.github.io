@@ -1,0 +1,90 @@
+@import url("./gen.css");
+
+@font-face {
+    font-family: "AstroSpace";
+    src: url(./fonts/AstroSpace.ttf);
+}
+
+.home {
+    background: var(--home-color);
+}
+
+span.home {
+    font-family: "AstroSpace";
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px)
+}
+
+.arrow {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow div {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+.text-ani {
+    position: relative;
+    align-items: center;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.text-ani .text-wrapper{
+    position: relative;
+    /* display: inline-block; */
+    overflow: hidden;
+}
+
+.text-ani .letter {
+    display: inline-block;
+    /* line-height: 0rem; */
+    transform-origin: 0 0;
+    /* max-height: -20rem; */
+    font-size: 4vw;
+}
+
+.text-ani .letters {
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .text-ani .letter {
+        font-size: 4vh;
+    }
+}
