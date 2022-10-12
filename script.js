@@ -193,6 +193,7 @@ function openContact() {
         form.style.display = "grid";
         button.innerHTML = "Send"
         button.style.width = "100px"
+        button.setAttribute("form", "")
     } else if (window.getComputedStyle(form).display === "grid") {
         // Email.send({
         //     Host: "smtp.elasticemail.com",
@@ -209,5 +210,9 @@ function openContact() {
         form.style.display = "none";
         button.innerHTML = "Send Another Message!"
         button.style.width = "250px"
+        button.setAttribute("form", "cf")
+        document.querySelector(".name-input").value = ""
+        document.querySelector(".email-input").value = ""
+        document.querySelector(".message-input").value = ""
     }
 }
