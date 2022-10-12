@@ -124,10 +124,6 @@
     --defaultBackground: #5d9cec;
 }
 
-.option:nth-child(6) {
-    --defaultBackground: #ac92ec;
-}
-
 .option.active {
     flex-grow: 10000;
     transform: scale(1);

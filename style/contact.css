@@ -20,23 +20,23 @@
     width: 100%;
 }
 
-.contact-icons > div {
+.contact-icons>div {
     font-family: "Aclonica";
     font-size: .75em;
 }
 
-.github > a:visited,
-.github > a:link,
-.github > a:hover,
-.github > a:active,
-.insta > a:visited,
-.insta > a:link,
-.insta > a:hover,
-.insta > a:active,
-.linkedin > a:visited,
-.linkedin > a:link,
-.linkedin > a:hover,
-.linkedin > a:active {
+.github>a:visited,
+.github>a:link,
+.github>a:hover,
+.github>a:active,
+.insta>a:visited,
+.insta>a:link,
+.insta>a:hover,
+.insta>a:active,
+.linkedin>a:visited,
+.linkedin>a:link,
+.linkedin>a:hover,
+.linkedin>a:active {
     text-decoration: none;
     color: white;
 }
@@ -54,7 +54,7 @@
     grid-row: 1;
 }
 
-.github > a {
+.github>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +78,7 @@
     grid-row: 1;
 }
 
-.insta > a {
+.insta>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,7 +102,7 @@
     grid-row: 1;
 }
 
-.linkedin > a {
+.linkedin>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,15 +125,16 @@
     .contact-text {
         font-size: 5vh;
     }
-    .github-label{
+
+    .github-label {
         display: none;
     }
 
-    .insta-label{
+    .insta-label {
         display: none;
     }
 
-    .linkedin-label{
+    .linkedin-label {
         display: none;
     }
 
@@ -178,6 +179,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .form {
@@ -185,7 +187,7 @@
     display: none;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 2fr 3fr;
-    column-gap: 5vh;   
+    column-gap: 5vh;
 }
 
 .contact-label {
@@ -226,7 +228,8 @@
     grid-column: 2;
 }
 
-input, textarea {
+input,
+textarea {
     border: 0;
     outline: 0;
     padding: 1em;
@@ -237,4 +240,58 @@ input, textarea {
     font-family: "Prototype";
     box-shadow: 0 1px 1px rgba(var(--blacksub), 0.1);
     resize: none;
+}
+
+#toggle {
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Aclonica';
+    font-weight: 500;
+    /* background: transparent; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.contact-animation {
+    background: #2565AE;
+    border: none;
+    z-index: 1;
+}
+
+.contact-animation:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--black-sub);
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.contact-animation:hover {
+    color: #fff;
+}
+
+.contact-animation:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.contact-animation:active {
+    top: 2px;
 }

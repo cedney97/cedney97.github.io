@@ -192,20 +192,22 @@ function openContact() {
     if (window.getComputedStyle(form).display === "none") {
         form.style.display = "grid";
         button.innerHTML = "Send"
+        button.style.width = "100px"
     } else if (window.getComputedStyle(form).display === "grid") {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "cadeedney@gmail.com",
-            Password: "Malachi97*",
-            To: 'cadeedney@gmail.com',
-            From: "cadeedney@gmail.com",
-            Subject: "Message from " + document.querySelector(".name-input").textContent,
-            Body: document.querySelector(".message-input").textContent
-        })
-        .then (
-            message => alert("Email Sent")
-        )
+        // Email.send({
+        //     Host: "smtp.elasticemail.com",
+        //     Username: "cadeedney@gmail.com",
+        //     Password: "Malachi97*",
+        //     To: 'cadeedney@gmail.com',
+        //     From: "cadeedney@gmail.com",
+        //     Subject: "Message from " + document.querySelector(".name-input").textContent,
+        //     Body: document.querySelector(".message-input").textContent
+        // })
+        // .then (
+        //     message => alert("Email Sent")
+        // )
         form.style.display = "none";
         button.innerHTML = "Send Another Message!"
+        button.style.width = "250px"
     }
 }
