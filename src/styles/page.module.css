@@ -1,0 +1,24 @@
+@import url(./gen.module.css);
+
+.nav_open {
+    margin-left: 250px;
+}
+
+.nav_closed {
+    margin-left: 0px;
+}
+
+.page_container {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    transition: all 0.5s ease;
+    height: 100vh;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.page_container::-webkit-scrollbar {
+    display: none;
+}

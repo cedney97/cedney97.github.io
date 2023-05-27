@@ -1,9 +1,30 @@
-import styles from '../styles/gen.module.css';
+import { useRef } from 'react'
+// import useScrollSnap from 'react-use-scroll-snap'
 
-const Page = () => {
+import HomePage from './HomePage'
+import AboutPage from './AboutPage'
+import ProjectsPage from './ProjectsPage'
+import ContactPage from './ContactPage'
+
+import styles from '../styles/page.module.css';
+
+const Page = ({
+    navOpen
+}) => {
+
+    // const scrollRef = useRef(null)
+    // useScrollSnap({
+    //     ref: scrollRef,
+    //     duration: 0,
+    //     delay: 0
+    // })
+
     return (
-        <div className="page_container">
-            <h1>Hello World</h1>
+        <div className={`${styles.page_container} ${navOpen ? styles.nav_open : styles.nav_closed}`} /*ref={scrollRef}*/>
+            <HomePage />
+            <AboutPage />
+            <ProjectsPage />
+            <ContactPage />
         </div>
     )
 }

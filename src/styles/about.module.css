@@ -1,0 +1,6 @@
+@import url(./gen.module.css);
+
+.about_container {
+    scroll-snap-align: center;
+    height: 100vh;
+}

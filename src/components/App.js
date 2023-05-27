@@ -6,7 +6,7 @@ import Sidenav from './Sidenav'
 import Page from './Page'
 
 const App = () => {
-  const [navOpen, setNavOpen] = useState("closed")
+  const [navOpen, setNavOpen] = useState(false)
 
   return (
     <div className={styles.app_container}>
@@ -14,7 +14,9 @@ const App = () => {
         navOpen={navOpen}
         setNavOpen={setNavOpen}
       />
-      <Page />
+      <Page
+        navOpen={navOpen}
+      />
     </div>
   );
 }

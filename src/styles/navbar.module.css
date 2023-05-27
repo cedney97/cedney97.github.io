@@ -15,11 +15,11 @@
 }
 
 .open {
-    width: 250px;
+    width: 250px !important;
 }
 
 .closed {
-    width: 0px;
+    width: 0px !important;
 }
 
 .sidenav a {
@@ -43,7 +43,7 @@
     margin-left: 50px;
 }
 
-.sidenav .menu-item {
+.sidenav .menu_item {
     font-family: "AstroSpace";
     background-color: #e3efe8;
     background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
