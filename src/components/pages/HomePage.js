@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
-import styles from '../styles/home.module.css'
+import styles from '../../styles/home.module.css'
 
 const HomePage = () => {
 

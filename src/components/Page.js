@@ -1,10 +1,7 @@
-import { useRef } from 'react'
-// import useScrollSnap from 'react-use-scroll-snap'
-
-import HomePage from './HomePage'
-import AboutPage from './AboutPage'
-import ProjectsPage from './ProjectsPage'
-import ContactPage from './ContactPage'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import ProjectsPage from './pages/ProjectsPage'
+import ContactPage from './pages/ContactPage'
 
 import styles from '../styles/page.module.css';
 

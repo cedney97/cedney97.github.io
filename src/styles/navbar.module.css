@@ -61,6 +61,8 @@
     z-index: 1;
     background: url(./images/hamburger-menu.png);
     background-size: 50px;
+    border: none;
+    cursor: pointer;
 }
 
 .home-nav {

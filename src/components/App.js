@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import styles from '../styles/gen.module.css';
 
-import Sidenav from './Sidenav'
+import Sidenav from './details/Sidenav'
 import Page from './Page'
 
 const App = () => {
