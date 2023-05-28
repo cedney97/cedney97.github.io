@@ -1,6 +1,20 @@
 @import url(./gen.module.css);
 
+@font-face {
+    font-family: "AstroSpace";
+    src: url(./fonts/AstroSpace.ttf);
+}
+
 .home_container {
+    background: var(--home-color);
     scroll-snap-align: center;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_wrapper {
+    font-family: "AstroSpace";
+    white-space: pre-line;
 }
