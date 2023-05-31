@@ -59,17 +59,17 @@ section {
     scroll-snap-align: start;
 }
 
-.astro-white {
+.astro_white {
     font-family: "AstroSpace";
     color: white;
 }
 
-.astro-red {
+.astro_red {
     font-family: "AstroSpace";
     color: var(--reddish);
 }
 
-.astro-teal {
+.astro_teal {
     font-family: "AstroSpace";
     color: var(--teal);
 }
